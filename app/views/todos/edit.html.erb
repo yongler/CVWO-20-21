@@ -1,0 +1,9 @@
+<h1>Editing Todo</h1>
+
+<%= render 'form', todo: @todo %>
+
+<% if todo.user == current.user%>
+	<%= link_to 'Show', @todo %> |
+	<%= link_to 'Back', todos_path %> |
+	<%= link_to 'Delete', @todo, method: :delete, class: 'btn btn-danger' %>
+<% end -%>
